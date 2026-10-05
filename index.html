@@ -1,34 +1,108 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BASIS Nexus | SAP BASIS Interview & Production Lab</title><meta name="description" content="BASIS Nexus - SAP BASIS learning, production troubleshooting, STAR interviews, T-code explorer, RCA lab and SUM/DMO walkthroughs."><link rel="stylesheet" href="style.css"></head><body>
-<div class="progress"><i id="progress"></i></div>
-<header><a class="logo" href="#home"><span>BN</span><b>BASIS <em>NEXUS</em></b></a><nav><a href="#levels">Learn</a><a href="#diagrams">Diagrams</a><a href="#troubleshoot">Troubleshoot</a><a href="#interview">Interview</a><a href="#tools">Tools</a></nav><button id="theme">☼</button><button id="menu">☰</button></header>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BASIS Nexus | SAP BASIS Learning & Interview Lab</title>
+<meta name="description" content="Practical SAP BASIS learning, T-code explorer, troubleshooting simulator, STAR interviews, architecture and RCA.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="header">
+  <a class="logo" href="#home"><span>BN</span><strong>BASIS <b>NEXUS</b></strong></a>
+  <nav>
+    <a href="#learn">Learn</a><a href="#diagrams">Diagrams</a><a href="#troubleshoot">Troubleshoot</a>
+    <a href="#interview">Interview</a><a href="#tcodes">T-codes</a><a href="#about">About</a>
+  </nav>
+  <div class="header-actions"><button id="theme" type="button">☼</button><button id="menu" type="button">☰</button></div>
+</header>
+
 <main id="home">
-<section class="hero"><div class="hero-copy"><label>PRODUCTION • INTERVIEW • HANDS-ON</label><h1>Master SAP BASIS with a <span>production mindset.</span></h1><p>Not just definitions. Learn what to check, where to check it, how to explain an incident, and how to answer SAP BASIS interview questions using STAR.</p><div class="actions"><a class="btn primary" href="#levels">Start the learning path →</a><a class="btn" href="#interview">Open interview lab</a></div><div class="hero-stats"><b>50+ <small>Interview Q&A</small></b><b>15 <small>Production labs</small></b><b>12 <small>Visual diagrams</small></b><b>30+ <small>T-codes</small></b></div></div><div class="hero-console"><div class="dots">● ● ● <span>basis@production</span></div><pre>$ sapcontrol -nr 00 -function GetProcessList
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">SAP BASIS • HANA • S/4HANA • PRODUCTION • INTERVIEW</span>
+    <h1>Learn SAP BASIS by thinking like a <em>production engineer.</em></h1>
+    <p>Detailed explanations, T-code intelligence, architecture diagrams, production troubleshooting, RCA examples and human-sounding STAR interview answers — all in one place.</p>
+    <div class="hero-buttons"><a class="primary" href="#learn">Start learning →</a><a class="secondary" href="#interview">Practice STAR answers</a></div>
+    <div class="metrics"><div><b>50+</b><span>Interview questions</span></div><div><b>40+</b><span>T-codes</span></div><div><b>15</b><span>Production scenarios</span></div><div><b>12</b><span>Visual diagrams</span></div></div>
+  </div>
+  <div class="hero-terminal">
+    <div class="terminal-bar"><i></i><i></i><i></i><span>basis@production</span></div>
+    <pre><code><b>$ sapcontrol</b> -nr 00 -function GetProcessList
+disp+work       <mark>GREEN</mark>
+msg_server      <mark>GREEN</mark>
+enserver        <mark>GREEN</mark>
 
-<span>✓</span> disp+work    GREEN
-<span>✓</span> msg_server   GREEN
-<span>✓</span> enserver     GREEN
-<span>✓</span> HANA         ONLINE
+<b>$ HDB info</b>
+SYSTEMDB        <mark>RUNNING</mark>
+TENANTDB        <mark>RUNNING</mark>
 
-$ tail -f dev_disp
-<span class="warn">⚠ investigate → isolate → fix → validate</span>
-<span class="cursor">█</span></pre></div></section>
-<section class="ribbon"><b>SM21</b><b>ST22</b><b>SM50/66</b><b>ST03N</b><b>STAD</b><b>STMS</b><b>SM37</b><b>SM59</b><b>STRUST</b><b>HANA</b><b>SUM/DMO</b></section>
+<b>$ incident</b>
+Monitor → Isolate → Fix → Validate → RCA</code></pre>
+  </div>
+</section>
 
-<section id="levels" class="section"><div class="head"><div><label>LEARNING PATH</label><h2>Beginner → Intermediate → Advanced</h2></div><p>Follow the path in order, or jump directly to the topic you need.</p></div><div class="level-tabs"><button class="active" data-level="beginner">01 Beginner</button><button data-level="intermediate">02 Intermediate</button><button data-level="advanced">03 Advanced</button></div><div id="levelCards" class="level-grid"></div></section>
+<section class="strip"><span>⚡ SUM / DMO</span><span>🧠 HANA</span><span>📦 STMS</span><span>🔐 STRUST</span><span>🔎 ST03N / STAD</span><span>☁ Cloud Connector</span></section>
 
-<section id="diagrams" class="section tinted"><div class="head"><div><label>VISUAL LAB</label><h2>Architecture & lifecycle diagrams</h2></div><p>Click any card for a detailed visual explanation.</p></div><div id="diagramGrid" class="diagram-grid"></div></section>
+<section id="learn" class="section">
+  <div class="section-head"><div><span class="eyebrow">LEARNING PATH</span><h2>Beginner → Intermediate → Advanced</h2><p>Click a topic. Every card opens a detailed guide.</p></div></div>
+  <div class="tabs"><button class="active" data-level="beginner">Beginner</button><button data-level="intermediate">Intermediate</button><button data-level="advanced">Advanced</button></div>
+  <div id="learningCards" class="grid"></div>
+</section>
 
-<section id="troubleshoot" class="section"><div class="head"><div><label>PRODUCTION LAB</label><h2>Troubleshooting simulator</h2></div><p>Choose a symptom and work through evidence → isolation → fix → validation.</p></div><div class="scenario-grid" id="scenarioGrid"></div></section>
+<section id="diagrams" class="section shaded">
+  <div class="section-head"><div><span class="eyebrow">VISUAL LAB</span><h2>Architecture & lifecycle diagrams</h2><p>These are clickable — open one to see the explanation and interview checkpoints.</p></div></div>
+  <div id="diagramCards" class="grid diagrams"></div>
+</section>
 
-<section id="interview" class="section tinted"><div class="head"><div><label>INTERVIEW LAB</label><h2>50+ SAP BASIS questions with STAR answers</h2></div><div class="actions"><button class="btn" id="randomQ">🎯 Random</button><button class="btn" id="show50">Show all</button></div></div><div class="star"><div><strong>S</strong><b>Situation</b><span>Context and problem</span></div><div><strong>T</strong><b>Task</b><span>Your responsibility</span></div><div><strong>A</strong><b>Action</b><span>What you actually did</span></div><div><strong>R</strong><b>Result</b><span>Outcome and learning</span></div></div><div class="q-tools"><input id="qSearch" placeholder="Search interview questions..."><select id="qCategory"><option value="all">All categories</option><option>Production</option><option>HANA</option><option>Transport</option><option>Migration</option><option>Security</option><option>Performance</option><option>Scenario</option></select></div><div id="questions" class="questions"></div></section>
+<section id="troubleshoot" class="section">
+  <div class="section-head"><div><span class="eyebrow">PRODUCTION LAB</span><h2>Troubleshooting simulator</h2><p>Choose a symptom and work through evidence → isolation → fix → validation.</p></div></div>
+  <div id="scenarioCards" class="grid"></div>
+</section>
 
-<section id="tools" class="section"><div class="head"><div><label>BASIS TOOLBOX</label><h2>T-code & command explorer</h2></div><p>Search by T-code, purpose or command.</p></div><input class="wide-search" id="toolSearch" placeholder="Try ST22, transport, HDB info, certificate..."><div id="toolGrid" class="tool-grid"></div></section>
+<section id="interview" class="section shaded">
+  <div class="section-head interview-head"><div><span class="eyebrow">INTERVIEW LAB</span><h2>STAR-based SAP BASIS interview answers</h2><p>Search a question, open it, and practise saying the answer naturally.</p></div><button id="randomQ" class="primary-btn" type="button">🎯 Random question</button></div>
+  <div class="star"><div><b>S</b><span>Situation</span><small>What happened?</small></div><div><b>T</b><span>Task</span><small>What were you responsible for?</small></div><div><b>A</b><span>Action</span><small>What did you actually do?</small></div><div><b>R</b><span>Result</span><small>What improved?</small></div></div>
+  <input id="qSearch" class="search" placeholder="Search interview questions: HANA, transport, migration, SSL...">
+  <div id="questionCards" class="questions"></div>
+</section>
 
-<section id="rca" class="section tinted"><div class="head"><div><label>RCA LAB</label><h2>Write production RCA like a consultant</h2></div><p>Use these examples as interview and real-project templates.</p></div><div id="rcaGrid" class="rca-grid"></div></section>
+<section id="tcodes" class="section">
+  <div class="section-head"><div><span class="eyebrow">T-CODE INTELLIGENCE</span><h2>Search a T-code and get an answer</h2><p>Try <b>ST22</b>, <b>ST03N</b>, <b>SM50</b>, <b>SM59</b>, <b>STMS</b>, <b>SU01</b>, <b>SM37</b>, <b>SP01</b> or a keyword such as “performance”.</p></div></div>
+  <div class="toolbox"><input id="tSearch" class="search" placeholder="Search T-code or keyword..."><button id="clearT" type="button">Clear</button></div>
+  <div id="tcodeResult" class="tcode-result">Start typing a T-code above.</div>
+  <div id="tcodeGrid" class="tool-grid"></div>
+</section>
 
-<section id="migration" class="section"><div class="head"><div><label>MIGRATION WALKTHROUGH</label><h2>SUM / DMO / S/4HANA visual journey</h2></div><p>Click a phase to understand the BASIS responsibility at that point.</p></div><div class="timeline" id="timeline"></div><div id="phaseDetail" class="phase-detail"></div></section>
+<section id="rca" class="section shaded">
+  <div class="section-head"><div><span class="eyebrow">RCA LAB</span><h2>Real production RCA examples</h2><p>Use these as templates for incident closure and interviews.</p></div></div>
+  <div id="rcaGrid" class="grid"></div>
+</section>
 
-<section class="section"><div class="callout big"><div><label>PRODUCTION RULE</label><h2>Don't just fix the symptom.</h2><p>Identify the layer, collect evidence, isolate the root cause, make a controlled change, validate the business service, then document the RCA and prevention.</p></div><div class="rule-flow"><span>Detect</span><i>→</i><span>Scope</span><i>→</i><span>Evidence</span><i>→</i><span>Fix</span><i>→</i><span>Validate</span><i>→</i><span>RCA</span></div></div></section>
-<section class="section about"><div class="about-card"><div class="avatar">PK</div><div><label>ABOUT BASIS NEXUS</label><h2>Built for practical SAP BASIS learning.</h2><p>BASIS Nexus brings together SAP administration, HANA, S/4HANA, migrations, cloud connectivity, monitoring, troubleshooting and interview preparation in one practical reference. The goal is to explain the <b>why + where + how + validation</b> behind each activity.</p><div class="chips"><span>Production mindset</span><span>Simple English</span><span>STAR answers</span><span>RCA focused</span><span>Visual learning</span></div></div></div></section>
-</main><footer><span>© 2026 BASIS Nexus</span><span>SAP BASIS • HANA • S/4HANA • Production & Interview Lab</span></footer>
-<div id="modal" class="modal"><div class="backdrop"></div><div class="panel"><button class="close">×</button><div id="modalBody"></div></div></div><script src="app.js"></script></body></html>
+<section id="migration" class="section">
+  <div class="section-head"><div><span class="eyebrow">MIGRATION LAB</span><h2>SUM / DMO / S/4HANA journey</h2><p>Click each phase to understand what BASIS should check and how to explain it in an interview.</p></div></div>
+  <div class="timeline" id="timeline"></div><div id="phaseDetail" class="phase-detail"></div>
+</section>
+
+<section id="about" class="section about">
+  <div class="about-card">
+    <div class="avatar">PK</div>
+    <div>
+      <span class="eyebrow">ABOUT BASIS NEXUS</span>
+      <h2>A practical SAP BASIS knowledge hub.</h2>
+      <p><strong>BASIS Nexus</strong> is a technical learning and interview platform created to explain SAP BASIS in simple, practical language. The focus is not memorising T-codes — it is understanding <b>what to check, why to check it, what evidence to collect, how to fix the issue and how to validate the result.</b></p>
+      <p>The site covers SAP administration, Linux, HANA, S/4HANA, transports, performance, security, certificates, migrations, cloud connectivity, HA/DR, production incidents and RCA.</p>
+      <div class="about-grid"><div><b>Learning style</b><span>Simple → detailed → scenario</span></div><div><b>Interview style</b><span>STAR + human wording</span></div><div><b>Production style</b><span>Evidence → isolation → validation</span></div></div>
+      <div class="chips"><span>Production mindset</span><span>Interview ready</span><span>RCA focused</span><span>Beginner friendly</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 BASIS Nexus <span>Built for SAP BASIS learning, troubleshooting & interviews</span></footer>
+
+<div id="modal" class="modal" aria-hidden="true"><div class="backdrop"></div><div class="modal-box"><button class="close" type="button">×</button><div id="modalBody"></div></div></div>
+<div id="toast" class="toast"></div>
+<script src="app.js" defer></script>
+</body></html>

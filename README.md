@@ -1,23 +1,26 @@
-# BASIS Nexus v6 — Fixed & Interactive
+# BASIS Nexus v7
 
-## IMPORTANT
-Upload the **contents of this folder** to the **root** of the GitHub repository.
-
-Repository root must look like:
-
+IMPORTANT: upload these files directly to the ROOT of the GitHub Pages repository:
 - index.html
 - style.css
 - app.js
-- README.md (optional)
-- sap-basis-architecture.html (optional existing file)
 
-Do NOT upload the `BASIS-Nexus-v6-Fixed` folder itself and do NOT upload a `site` folder.
+No folder nesting.
 
-## Why v6
-The previous v5 package had two problems:
-1. The ZIP placed the site files inside a `site/` folder, which can cause GitHub Pages to load the wrong root content.
-2. `app.js` contained JavaScript syntax errors, so the interactive cards could not initialize.
+## v7 fixes
+- All cards are rendered after `app.js` loads with `defer`.
+- Event listeners use standard addEventListener.
+- T-code search is functional and shows an explanation immediately.
+- T-code cards are clickable.
+- Troubleshooting cards open detailed guides.
+- STAR questions can be searched and expanded.
+- Random interview question works.
+- About section is visible and included in the navigation.
+- RCA cards and migration phases are interactive.
+- Dark/light toggle works.
+- Mobile navigation works.
 
-v6 fixes both issues.
+## T-code examples
+ST22, ST03N, STAD, SM50, SM66, SM21, SM37, SM12, SM59, STMS, SE10, SP01, SPAD, SU01, SUIM, STRUST, RZ10, RZ11, SM51, SM04, AL08, SM13, ST05, ST12, ST06, ST10, DB02, DB12, DB13, DBACOCKPIT, SMICM, SMGW, SM58, SMQ1, SMQ2, ST11.
 
-After committing to `main`, wait for Pages deployment and hard refresh with Ctrl+Shift+R.
+The T-code descriptions are intended as a learning reference; exact availability/functions can vary by SAP release and installed components.
