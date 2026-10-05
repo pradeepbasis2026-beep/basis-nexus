@@ -62,6 +62,17 @@
   <div><strong>04</strong><span>Prepare for interviews</span></div>
 </section>
 
+<section class="section overview">
+  <div class="section-head"><div><div class="eyebrow">The BASIS map</div><h2>What does SAP BASIS cover?</h2></div></div>
+  <div class="overview-grid">
+    <div><b>01 · Platform</b><p>Installation, instances, ASCS/ERS, profiles, kernel, SAP Host Agent and operating-system integration.</p></div>
+    <div><b>02 · Operations</b><p>User administration, jobs, spool, RFCs, transports, system monitoring and daily health checks.</p></div>
+    <div><b>03 · Database</b><p>HANA architecture, tenant databases, backups, recovery, replication, capacity and database connectivity.</p></div>
+    <div><b>04 · Lifecycle</b><p>Support packages, SPAM/SAINT, kernel upgrades, SUM, DMO, S/4HANA conversion and system copies.</p></div>
+    <div><b>05 · Reliability</b><p>Performance analysis, HA/DR, incident response, RCA, certificates and secure communication.</p></div>
+    <div><b>06 · Cloud</b><p>AWS, SAP Cloud Connector, RISE with SAP and hybrid on-premise/cloud operations.</p></div>
+  </div>
+</section>
 <section class="section" id="articles">
   <div class="section-head">
     <div><div class="eyebrow">Knowledge base</div><h2>Latest articles</h2></div>
@@ -102,19 +113,126 @@
 <section class="section topics-section" id="topics">
   <div class="section-head"><div><div class="eyebrow">Explore</div><h2>Learn by topic</h2></div></div>
   <div class="topic-grid">
-    <a href="#articles" class="topic"><span>⚙</span><div><b>BASIS Administration</b><small>Users · Jobs · Spool · RFC · STMS</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>◈</span><div><b>SAP HANA</b><small>Architecture · Backup · HA · DB</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>◆</span><div><b>S/4HANA</b><small>Conversion · SUM · DMO · Kernel</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>☁</span><div><b>Cloud & RISE</b><small>AWS · Cloud Connector · RISE</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>⌁</span><div><b>Monitoring</b><small>ST22 · SM21 · ST03N · STAD</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>✓</span><div><b>Interview Prep</b><small>Scenarios · RCA · Practical answers</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>⚙</span><div><b>BASIS Administration</b><small>Users, roles, profiles, parameters, jobs, spool, RFC and daily operations.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>◈</span><div><b>SAP Architecture</b><small>ASCS, ERS, PAS, AAS, work processes, instances, clients and system landscape.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>⇄</span><div><b>Transport Management</b><small>STMS, transport routes, import queues, return codes and transport troubleshooting.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>⌁</span><div><b>Monitoring & Performance</b><small>SM21, ST22, SM50, SM66, ST03N, STAD, DB02 and performance analysis.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>◉</span><div><b>SAP HANA</b><small>System DB, tenant DB, backup, recovery, HANA Cockpit, HA and replication.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>◆</span><div><b>S/4HANA & Upgrades</b><small>SUM, DMO, system conversion, upgrades, kernel maintenance and Maintenance Planner.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>☁</span><div><b>Cloud & RISE with SAP</b><small>AWS, Cloud Connector, RISE, connectivity, certificates and cloud operations.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>⟳</span><div><b>System Copy & Refresh</b><small>System refresh, homogeneous/heterogeneous copy, SWPM, client copy and post-copy steps.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>◫</span><div><b>Installation & Lifecycle</b><small>SAP installation, filesystem mounts, profiles, SAP Host Agent, start/stop and patches.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>♙</span><div><b>Security & Certificates</b><small>SU01, PFCG, SUIM, SSL/TLS, STRUST, certificates and secure connectivity.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>⌘</span><div><b>High Availability & DR</b><small>ASCS/ERS, HANA System Replication, failover, backup strategy and disaster recovery.</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>✓</span><div><b>Troubleshooting & Interview Prep</b><small>RCA, incident scenarios, issue isolation and practical BASIS interview answers.</small></div><em>→</em></a>
   </div>
 </section>
 
+
+<section class="section scenarios" id="scenarios">
+  <div class="section-head">
+    <div><div class="eyebrow">Production playbook</div><h2>Real-world scenarios & troubleshooting</h2></div>
+    <p class="section-intro">A practical incident-first approach: identify the symptom, collect evidence, isolate the layer, fix safely, validate, and document the RCA.</p>
+  </div>
+  <div class="scenario-grid">
+    <article class="scenario-card critical">
+      <div class="scenario-top"><span class="severity">P1 / CRITICAL</span><span>Availability</span></div>
+      <h3>SAP system is down</h3>
+      <p>Users cannot log in or receive connection errors.</p>
+      <ol><li>Check OS/server availability and filesystem space.</li><li>Run <code>sapcontrol -nr &lt;NN&gt; -function GetProcessList</code>.</li><li>Check ASCS/PAS/AAS and database status.</li><li>Review <b>dev_disp</b>, <b>dev_ms</b>, <b>dev_w*</b> and system logs.</li><li>Restart only after identifying the failed component and following the runbook.</li></ol>
+      <button class="scenario-btn" data-scenario="systemdown">Open troubleshooting guide →</button>
+    </article>
+
+    <article class="scenario-card">
+      <div class="scenario-top"><span class="severity">P1 / HIGH</span><span>Performance</span></div>
+      <h3>SAP is suddenly very slow</h3>
+      <p>Multiple users report high response time.</p>
+      <ol><li>Confirm scope and exact time window.</li><li>Check <b>ST03N</b> for workload and response-time trends.</li><li>Use <b>STAD</b> for request-level evidence.</li><li>Check <b>SM50/SM66</b>, CPU, memory and DB indicators.</li><li>Correlate with recent changes and infrastructure alerts.</li></ol>
+      <button class="scenario-btn" data-scenario="slow">Open troubleshooting guide →</button>
+    </article>
+
+    <article class="scenario-card">
+      <div class="scenario-top"><span class="severity">HIGH</span><span>Transport</span></div>
+      <h3>Transport import failed — RC 8 / RC 12</h3>
+      <p>A transport reaches QAS/PRD but the import ends with errors.</p>
+      <ol><li>Open the transport import log in <b>STMS</b>.</li><li>Identify the exact object and error message.</li><li>Check sequence/dependencies and target system status.</li><li>Review relevant application logs or DDIC/object activation issues.</li><li>Do not blindly re-import; document the cause and corrective action.</li></ol>
+      <button class="scenario-btn" data-scenario="transport">Open troubleshooting guide →</button>
+    </article>
+
+    <article class="scenario-card">
+      <div class="scenario-top"><span class="severity">HIGH</span><span>Database</span></div>
+      <h3>HANA disk usage is critical</h3>
+      <p>Database filesystem or HANA persistence usage is approaching capacity.</p>
+      <ol><li>Confirm which filesystem/volume is consuming space.</li><li>Check HANA alerts and database usage.</li><li>Review backup/log-backup destination growth.</li><li>Do not delete database files manually.</li><li>Engage the DB/storage owner and execute the approved cleanup/extension procedure.</li></ol>
+      <button class="scenario-btn" data-scenario="hanaDisk">Open troubleshooting guide →</button>
+    </article>
+
+    <article class="scenario-card">
+      <div class="scenario-top"><span class="severity">MEDIUM</span><span>Jobs</span></div>
+      <h3>Background job is cancelled</h3>
+      <p>A business-critical SM37 job fails repeatedly.</p>
+      <ol><li>Check job log, job step and runtime.</li><li>Check the executing user and authorization.</li><li>Check ST22 if an ABAP dump occurred.</li><li>Check SM50/SM66 and application logs if processing is stuck.</li><li>Validate variant/input data before rerunning.</li></ol>
+      <button class="scenario-btn" data-scenario="job">Open troubleshooting guide →</button>
+    </article>
+
+    <article class="scenario-card">
+      <div class="scenario-top"><span class="severity">MEDIUM</span><span>Connectivity</span></div>
+      <h3>RFC connection fails</h3>
+      <p>An interface reports a connection or authorization error.</p>
+      <ol><li>Test the destination in <b>SM59</b>.</li><li>Separate network/host failure from authentication failure.</li><li>Check gateway/service configuration where relevant.</li><li>Validate technical user, certificate or password.</li><li>Retest from SAP and confirm the dependent interface.</li></ol>
+      <button class="scenario-btn" data-scenario="rfc">Open troubleshooting guide →</button>
+    </article>
+
+    <article class="scenario-card">
+      <div class="scenario-top"><span class="severity">MEDIUM</span><span>Security</span></div>
+      <h3>SSL certificate is expired</h3>
+      <p>An HTTPS integration suddenly stops working after certificate expiry.</p>
+      <ol><li>Confirm expiry and identify the affected PSE in <b>STRUST</b>.</li><li>Obtain the correct certificate chain from the approved source.</li><li>Update/import the chain according to the change procedure.</li><li>Save/distribute the PSE as required.</li><li>Retest the integration and document the new expiry date.</li></ol>
+      <button class="scenario-btn" data-scenario="ssl">Open troubleshooting guide →</button>
+    </article>
+
+    <article class="scenario-card">
+      <div class="scenario-top"><span class="severity">MEDIUM</span><span>Users</span></div>
+      <h3>User cannot log in</h3>
+      <p>A user reports password, lock, authorization or connection problems.</p>
+      <ol><li>Check whether the user is locked/expired in <b>SU01</b>.</li><li>Separate authentication from authorization.</li><li>Check ST22/application logs if a technical error occurs.</li><li>For Fiori/SSO, check the identity provider/trust path.</li><li>Never grant broad roles as a quick fix.</li></ol>
+      <button class="scenario-btn" data-scenario="user">Open troubleshooting guide →</button>
+    </article>
+  </div>
+</section>
+
+<section class="section error-guide" id="errors">
+  <div class="section-head">
+    <div><div class="eyebrow">Quick reference</div><h2>Common BASIS errors</h2></div>
+  </div>
+  <div class="error-table-wrap">
+    <table class="error-table">
+      <thead><tr><th>Symptom / Error</th><th>First checks</th><th>Typical direction</th></tr></thead>
+      <tbody>
+        <tr><td><b>System not available</b></td><td>sapcontrol, OS, ASCS/PAS, DB, logs</td><td>Identify failed layer before restart</td></tr>
+        <tr><td><b>ST22 ABAP dump</b></td><td>Dump category, time, program, user</td><td>ABAP/application or data issue</td></tr>
+        <tr><td><b>SM21 critical event</b></td><td>Event text and timestamp</td><td>Correlate with OS/DB/application logs</td></tr>
+        <tr><td><b>SM37 job cancelled</b></td><td>Job log, step, user, ST22</td><td>Program, authorization, data or resource issue</td></tr>
+        <tr><td><b>STMS RC 8 / 12</b></td><td>Import log, object, sequence</td><td>Transport/content/dependency issue</td></tr>
+        <tr><td><b>RFC connection failed</b></td><td>SM59 connection/auth tests</td><td>Network, gateway, credentials/certificate</td></tr>
+        <tr><td><b>Work processes full</b></td><td>SM50/SM66, long runners, CPU/DB</td><td>Long transaction, lock, DB or resource bottleneck</td></tr>
+        <tr><td><b>Filesystem full</b></td><td>df -h, mount usage, logs</td><td>Safe cleanup/extension; never delete SAP DB files blindly</td></tr>
+        <tr><td><b>HANA alert / disk full</b></td><td>HANA alerts, persistence/log area</td><td>DB/storage investigation and approved capacity action</td></tr>
+        <tr><td><b>SSL handshake/certificate error</b></td><td>STRUST, expiry, certificate chain</td><td>Trust/certificate configuration</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 <section class="section about" id="about">
   <div class="about-card">
     <div class="about-avatar">PK</div>
-    <div><div class="eyebrow">About BASIS Nexus</div><h2>Practical knowledge, not just definitions.</h2><p>BASIS Nexus is a technical knowledge hub created to make SAP BASIS concepts easier to understand through architecture visuals, step-by-step guides and real-world troubleshooting scenarios.</p><div class="chips"><span>SAP BASIS</span><span>HANA</span><span>S/4HANA</span><span>Cloud</span><span>Operations</span></div></div>
+    <div>
+      <div class="eyebrow">About the author</div>
+      <h2>Pradeep Kumar</h2>
+      <p>I'm an IT professional with 10+ years of experience across infrastructure, Linux/VMware environments, SAP technical platforms, data and analytics, and technology delivery. My career has included infrastructure operations, SAP PI/PO exposure, business and analytics roles, and Scrum Master / SAFe responsibilities.</p>
+      <p>BASIS Nexus is where I bring that technical and operations mindset into SAP BASIS — documenting architecture, administration, HANA, S/4HANA, migrations, cloud connectivity, monitoring and troubleshooting in simple, practical language.</p>
+      <div class="chips"><span>10+ Years IT</span><span>Infrastructure</span><span>SAP Technical</span><span>Linux / VMware</span><span>HANA</span><span>S/4HANA</span><span>Cloud</span><span>SAFe / Scrum</span></div>
+    </div>
   </div>
 </section>
 </main>
