@@ -1,21 +1,23 @@
-# BASIS Nexus v5 — Ultimate SAP BASIS Learning & Interview Lab
+# BASIS Nexus v6 — Fixed & Interactive
 
-Upload these files to your GitHub Pages repository:
-- `index.html`
-- `style.css`
-- `app.js`
+## IMPORTANT
+Upload the **contents of this folder** to the **root** of the GitHub repository.
 
-## New in v5
-- Beginner → Intermediate → Advanced learning path
-- 50+ SAP BASIS interview questions with STAR answers
-- Random interview question mode and category/search filters
-- Interactive T-code + Linux/HANA command explorer
-- Production troubleshooting simulator with 15 scenarios
-- RCA lab with reusable RCA templates
-- SUM / DMO / S/4HANA migration visual walkthrough
-- 12 interactive architecture/lifecycle diagrams
-- Dark/light mode and responsive mobile design
+Repository root must look like:
 
-Keep `sap-basis-architecture.html` if you want to retain the older standalone page.
+- index.html
+- style.css
+- app.js
+- README.md (optional)
+- sap-basis-architecture.html (optional existing file)
 
-After committing to `main`, wait for GitHub Pages deployment and hard refresh with Ctrl+Shift+R.
+Do NOT upload the `BASIS-Nexus-v6-Fixed` folder itself and do NOT upload a `site` folder.
+
+## Why v6
+The previous v5 package had two problems:
+1. The ZIP placed the site files inside a `site/` folder, which can cause GitHub Pages to load the wrong root content.
+2. `app.js` contained JavaScript syntax errors, so the interactive cards could not initialize.
+
+v6 fixes both issues.
+
+After committing to `main`, wait for Pages deployment and hard refresh with Ctrl+Shift+R.
