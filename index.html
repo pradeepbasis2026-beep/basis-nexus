@@ -3,50 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BASIS Nexus | Pradeep Kumar</title>
-<meta name="description" content="Practical SAP BASIS, HANA and S/4HANA administration guides, troubleshooting notes and interview-focused technical articles by Pradeep Kumar.">
-<link rel="stylesheet" href="assets/style.css">
+<meta name="description" content="BASIS Nexus — practical SAP BASIS, HANA, S/4HANA, cloud and technical operations knowledge.">
+<title>BASIS Nexus | SAP BASIS Knowledge Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="brand" href="index.html">SAP BASIS <span>Insights</span></a>
-    <nav><a href="#articles">Articles</a><a href="#about">About</a><a href="#topics">Topics</a><a href="#contact">Contact</a></nav>
+<div class="progress" id="progress"></div>
+
+<header class="topbar">
+  <a class="brand" href="#home"><span class="brand-mark">N</span><span>BASIS <b>NEXUS</b></span></a>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#articles">Articles</a><a href="#topics">Topics</a><a href="#about">About</a>
+  </nav>
+  <div class="header-actions">
+    <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
   </div>
 </header>
 
-<main>
+<main id="home">
 <section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow">SAP BASIS • HANA • S/4HANA</p>
-      <h1>Practical SAP BASIS knowledge, explained simply.</h1>
-      <p class="lead">A technical blog covering SAP BASIS administration, monitoring, transports, HANA, S/4HANA, migrations and real-world troubleshooting scenarios.</p>
-      <div class="buttons"><a class="button primary" href="#articles">Explore Articles</a><a class="button secondary" href="#about">About the Author</a></div>
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> SAP Technical Knowledge Hub</div>
+    <h1>Understand SAP BASIS.<br><span>Build confidence.</span></h1>
+    <p>Practical guides for SAP BASIS administration, HANA, S/4HANA, migrations, cloud operations and real-world troubleshooting — explained simply.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#articles">Explore articles <span>→</span></a>
+      <a class="btn ghost" href="#topics">Browse topics</a>
     </div>
-    <div class="architecture-card">
-      <div class="card-title">SAP System Architecture</div>
-      <div class="node">SAP Users / Fiori</div><div class="arrow">↓</div>
-      <div class="row"><div class="node">ASCS<br><small>Message + Enqueue</small></div><div class="node">PAS / AAS<br><small>Application Servers</small></div></div>
-      <div class="arrow">↓</div><div class="node accent">SAP HANA<br><small>System DB + Tenant DB</small></div>
+    <div class="trust-row"><span>✓ Beginner friendly</span><span>✓ Scenario based</span><span>✓ Interview focused</span></div>
+  </div>
+  <div class="hero-visual">
+    <div class="orb"></div>
+    <div class="terminal">
+      <div class="terminal-top"><span></span><span></span><span></span><label>BASIS_NEXUS.sh</label></div>
+      <div class="terminal-body">
+        <p><i>$</i> sapcontrol -nr 00 -function GetProcessList</p>
+        <p class="ok">✓ disp+work &nbsp; GREEN</p>
+        <p class="ok">✓ igswd_mt &nbsp;&nbsp; GREEN</p>
+        <p class="ok">✓ msg_server &nbsp; GREEN</p>
+        <p><i>$</i> systemctl status sapinit</p>
+        <p class="cyan">● SAP SYSTEM — OPERATIONAL</p>
+      </div>
     </div>
+    <div class="float-card fc1"><b>10+</b><small>Core Topics</small></div>
+    <div class="float-card fc2"><b>24×7</b><small>Ops Mindset</small></div>
   </div>
 </section>
 
-<section id="articles" class="section">
-<div class="container"><p class="eyebrow">Latest</p><h2>Featured articles</h2>
-<div class="cards">
-<article class="article-card"><span class="tag">BASIS Fundamentals</span><h3>SAP BASIS Architecture Explained</h3><p>Understand ASCS, PAS, AAS, work processes, database connectivity and the role of BASIS in an SAP landscape.</p><a href="articles/sap-basis-architecture.html">Read article →</a></article>
-<article class="article-card"><span class="tag">Monitoring</span><h3>How to Analyze ST03N & STAD</h3><p>A practical approach to identifying response-time, database, CPU and workload-related performance issues.</p><a href="#">Coming soon →</a></article>
-<article class="article-card"><span class="tag">HANA</span><h3>SAP HANA System DB vs Tenant DB</h3><p>Learn the difference between the system database and tenant databases using a simple real-world model.</p><a href="#">Coming soon →</a></article>
-</div></div>
+<section class="stats">
+  <div><strong>01</strong><span>Learn the architecture</span></div>
+  <div><strong>02</strong><span>Master daily operations</span></div>
+  <div><strong>03</strong><span>Troubleshoot scenarios</span></div>
+  <div><strong>04</strong><span>Prepare for interviews</span></div>
 </section>
 
-<section id="topics" class="section muted"><div class="container"><p class="eyebrow">Knowledge Base</p><h2>Topics I cover</h2><div class="topics"><span>System Monitoring</span><span>STMS & Transports</span><span>Users & Roles</span><span>Background Jobs</span><span>Spool Administration</span><span>RFC & Connectivity</span><span>SAP HANA</span><span>S/4HANA</span><span>SUM & DMO</span><span>Kernel Upgrade</span><span>System Refresh</span><span>Cloud Connector</span><span>RISE with SAP</span><span>Performance Troubleshooting</span></div></div></section>
+<section class="section" id="articles">
+  <div class="section-head">
+    <div><div class="eyebrow">Knowledge base</div><h2>Latest articles</h2></div>
+    <div class="controls">
+      <div class="searchbox"><span>⌕</span><input id="articleSearch" placeholder="Search articles..." /></div>
+      <select id="categoryFilter"><option value="all">All topics</option><option value="BASIS">BASIS</option><option value="HANA">HANA</option><option value="S/4HANA">S/4HANA</option><option value="Cloud">Cloud</option><option value="Troubleshooting">Troubleshooting</option></select>
+    </div>
+  </div>
+  <div class="featured-grid" id="articleGrid">
+    <article class="article-card featured" data-category="BASIS" data-title="SAP BASIS Architecture Explained">
+      <div class="card-visual architecture"><span>ASCS</span><span>PAS / AAS</span><span>HANA</span></div>
+      <div class="card-body"><div class="meta"><span class="tag">BASIS</span><span>8 min read</span></div><h3>SAP BASIS Architecture Explained</h3><p>Understand ASCS, PAS, AAS, work processes, database connectivity and the role of BASIS.</p><button class="read-btn" data-article="architecture">Read article →</button></div>
+    </article>
+    <article class="article-card" data-category="BASIS" data-title="STMS Transport Management System">
+      <div class="card-visual transport"><div class="node">DEV</div><div class="line"></div><div class="node">QAS</div><div class="line"></div><div class="node">PRD</div></div>
+      <div class="card-body"><div class="meta"><span class="tag">BASIS</span><span>7 min read</span></div><h3>STMS: Transport Management Made Simple</h3><p>Learn the DEV → QAS → PRD flow, transport routes, import queues and common checks.</p><button class="read-btn" data-article="stms">Read article →</button></div>
+    </article>
+    <article class="article-card" data-category="HANA" data-title="SAP HANA System DB Tenant DB">
+      <div class="card-visual database"><div>HANA</div><small>SYSTEM DB</small><small>TENANT DB</small></div>
+      <div class="card-body"><div class="meta"><span class="tag">HANA</span><span>6 min read</span></div><h3>HANA System DB vs Tenant DB</h3><p>A simple mental model for understanding multitenant HANA architecture.</p><button class="read-btn" data-article="hana">Read article →</button></div>
+    </article>
+    <article class="article-card" data-category="Troubleshooting" data-title="ST03N STAD Performance Analysis">
+      <div class="card-visual chart"><div class="bars"><i></i><i></i><i></i><i></i><i></i></div><span>ST03N / STAD</span></div>
+      <div class="card-body"><div class="meta"><span class="tag">Troubleshooting</span><span>9 min read</span></div><h3>Performance Analysis with ST03N & STAD</h3><p>How to read response time, DB time, CPU time and identify where an SAP transaction is spending time.</p><button class="read-btn" data-article="performance">Read article →</button></div>
+    </article>
+    <article class="article-card" data-category="S/4HANA" data-title="SUM DMO S4HANA Migration">
+      <div class="card-visual migration"><span>ECC</span><b>→</b><span>S/4</span></div>
+      <div class="card-body"><div class="meta"><span class="tag">S/4HANA</span><span>10 min read</span></div><h3>SUM & DMO: The Migration Picture</h3><p>Understand the role of SUM, DMO, Maintenance Planner and the migration lifecycle.</p><button class="read-btn" data-article="migration">Read article →</button></div>
+    </article>
+    <article class="article-card" data-category="Cloud" data-title="SAP Cloud Connector">
+      <div class="card-visual cloud"><div class="cloud-icon">☁</div><span>ON-PREM</span><b>↔</b><span>CLOUD</span></div>
+      <div class="card-body"><div class="meta"><span class="tag">Cloud</span><span>7 min read</span></div><h3>SAP Cloud Connector Explained</h3><p>See how Cloud Connector creates a controlled tunnel between on-premise systems and SAP cloud services.</p><button class="read-btn" data-article="cloud">Read article →</button></div>
+    </article>
+  </div>
+  <div id="noResults" class="no-results">No articles match your search.</div>
+</section>
 
-<section id="about" class="section"><div class="container about"><div><p class="eyebrow">About</p><h2>Pradeep Kumar</h2><p>I’m building this blog to document practical SAP BASIS concepts and troubleshooting approaches in simple language. The goal is to turn complex administration topics into useful, interview-ready and operations-focused guides.</p><p>The blog will grow from BASIS fundamentals into HANA, S/4HANA, migration, monitoring and cloud-related topics.</p></div><div class="profile-box"><strong>SAP BASIS Focus</strong><p>Administration • Monitoring • HANA • S/4HANA • Migration • Troubleshooting</p></div></div></section>
+<section class="section topics-section" id="topics">
+  <div class="section-head"><div><div class="eyebrow">Explore</div><h2>Learn by topic</h2></div></div>
+  <div class="topic-grid">
+    <a href="#articles" class="topic"><span>⚙</span><div><b>BASIS Administration</b><small>Users · Jobs · Spool · RFC · STMS</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>◈</span><div><b>SAP HANA</b><small>Architecture · Backup · HA · DB</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>◆</span><div><b>S/4HANA</b><small>Conversion · SUM · DMO · Kernel</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>☁</span><div><b>Cloud & RISE</b><small>AWS · Cloud Connector · RISE</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>⌁</span><div><b>Monitoring</b><small>ST22 · SM21 · ST03N · STAD</small></div><em>→</em></a>
+    <a href="#articles" class="topic"><span>✓</span><div><b>Interview Prep</b><small>Scenarios · RCA · Practical answers</small></div><em>→</em></a>
+  </div>
+</section>
 
-<section id="contact" class="section contact"><div class="container"><h2>Let's connect</h2><p>Find me on LinkedIn or use this site as a growing knowledge base for SAP BASIS.</p><a class="button primary" href="https://www.linkedin.com/" target="_blank">LinkedIn</a></div></section>
+<section class="section about" id="about">
+  <div class="about-card">
+    <div class="about-avatar">PK</div>
+    <div><div class="eyebrow">About BASIS Nexus</div><h2>Practical knowledge, not just definitions.</h2><p>BASIS Nexus is a technical knowledge hub created to make SAP BASIS concepts easier to understand through architecture visuals, step-by-step guides and real-world troubleshooting scenarios.</p><div class="chips"><span>SAP BASIS</span><span>HANA</span><span>S/4HANA</span><span>Cloud</span><span>Operations</span></div></div>
+  </div>
+</section>
 </main>
-<footer><div class="container">© 2026 Pradeep Kumar • BASIS Nexus</div></footer>
-</body></html>
+
+<footer><div><a class="brand" href="#home"><span class="brand-mark">N</span><span>BASIS <b>NEXUS</b></span></a><p>Practical SAP technical knowledge.</p></div><div class="footer-links"><a href="#articles">Articles</a><a href="#topics">Topics</a><a href="#about">About</a></div><span>© 2026 BASIS Nexus</span></footer>
+
+<div class="modal" id="modal"><div class="modal-panel"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
+
+<div class="search-overlay" id="searchOverlay"><div class="global-search"><button class="close" id="closeSearch">×</button><div class="eyebrow">Search BASIS Nexus</div><h2>What do you want to learn?</h2><input id="globalSearch" autofocus placeholder="Try: STMS, HANA, performance..." /><div id="searchResults"></div></div></div>
+
+<script src="app.js"></script>
+</body>
+</html>
