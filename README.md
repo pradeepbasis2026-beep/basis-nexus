@@ -1,21 +1,23 @@
-# BASIS Nexus v8 — Syllabus-Based Detailed SAP BASIS Portal
+# BASIS Nexus v9 — SAP Basis Field Manual
 
-This version is built from the uploaded SAP BASIS syllabus.
+This redesign is based directly on the supplied seven-article SAP Basis source.
 
-Upload these files directly to the GitHub Pages repository root:
+## Site structure
+1. A practical SAP Basis career roadmap for 2026
+2. Enterprise cloud migration checklist for SAP landscapes
+3. How we run SAP Basis mock interviews that convert
+4. SAP architecture, clients, users, transports, and daily monitoring
+5. Installation, upgrades, system refresh, jobs, and backup
+6. Performance, high availability, HANA, monitoring, and security hardening
+7. Cloud operations, S/4HANA readiness, automation, BTP, and production war rooms
+
+## Upload to GitHub Pages
+Upload these directly into the repository root:
 - index.html
 - style.css
 - app.js
 - diagrams/ (entire folder)
 
-The portal groups the syllabus into 16 major practical modules. Each module contains:
-- Relevant architecture/lifecycle SVG diagram
-- Detailed step-by-step explanation
-- T-codes/tools
-- Source syllabus topics covered
-- Production checklist
-- Interview wording
+This is an editorial redesign. Source wording and terminology are preserved in the article reader; the visual structure adds navigation, search, diagrams, filters, reading progress, and responsive presentation.
 
-The original syllabus topic list is searchable in the Syllabus section.
-
-Note: SAP procedures and screens can vary by SAP product/release. Use release-specific SAP documentation and your customer's change procedures before performing production changes.
+The reconstructed tables use only values present in the supplied markdown. No external research was used.
