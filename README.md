@@ -1,19 +1,21 @@
-# BASIS Nexus v4 — Ultimate
+# BASIS Nexus v8 — Syllabus-Based Detailed SAP BASIS Portal
 
-This version is a major expansion of the BASIS Nexus blog.
+This version is built from the uploaded SAP BASIS syllabus.
 
-### Included
-- Much larger, more readable content
-- Detailed SAP BASIS / HANA / S/4HANA topics
-- Production troubleshooting playbooks
-- STAR interview laboratory with model answers
-- Random STAR interview question mode
-- Colourful interactive architecture diagrams
-- SAP 3-tier, HANA MDC, STMS, Cloud Connector, migration and incident-flow diagrams
-- Search/filtering, dark mode and responsive layout
-- T-code and troubleshooting content
+Upload these files directly to the GitHub Pages repository root:
+- index.html
+- style.css
+- app.js
+- diagrams/ (entire folder)
 
-### GitHub Pages upload
-Replace the existing `index.html`, `style.css` and `app.js` in the `main` branch with the files from this package. Keep `sap-basis-architecture.html` if you already have it.
+The portal groups the syllabus into 16 major practical modules. Each module contains:
+- Relevant architecture/lifecycle SVG diagram
+- Detailed step-by-step explanation
+- T-codes/tools
+- Source syllabus topics covered
+- Production checklist
+- Interview wording
 
-After committing, wait 1–2 minutes and hard refresh the site with Ctrl+Shift+R.
+The original syllabus topic list is searchable in the Syllabus section.
+
+Note: SAP procedures and screens can vary by SAP product/release. Use release-specific SAP documentation and your customer's change procedures before performing production changes.

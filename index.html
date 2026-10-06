@@ -1,248 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BASIS Nexus — practical SAP BASIS, HANA, S/4HANA, cloud and technical operations knowledge.">
-<title>BASIS Nexus | SAP BASIS Knowledge Hub</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BASIS Nexus v8 | Detailed SAP BASIS Learning Portal</title>
+<link rel="stylesheet" href="style.css"></head>
 <body>
-<div class="progress" id="progress"></div>
-
-<header class="topbar">
-  <a class="brand" href="#home"><span class="brand-mark">N</span><span>BASIS <b>NEXUS</b></span></a>
-  <nav id="nav">
-    <a href="#home">Home</a><a href="#articles">Articles</a><a href="#topics">Topics</a><a href="#about">About</a>
-  </nav>
-  <div class="header-actions">
-    <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
-    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
-    <button class="menu-btn" id="menuBtn">☰</button>
-  </div>
-</header>
-
+<header><a class="brand" href="#home"><b>BN</b> BASIS <span>NEXUS</span></a><nav>
+<a href="#topics">Topics</a><a href="#diagrams">Diagrams</a><a href="#syllabus">Syllabus</a><a href="#about">About</a></nav>
+<button id="theme">☼</button></header>
 <main id="home">
-<section class="hero">
-  <div class="hero-copy">
-    <div class="eyebrow"><span class="pulse"></span> SAP Technical Knowledge Hub</div>
-    <h1>Understand SAP BASIS.<br><span>Build confidence.</span></h1>
-    <p>Practical guides for SAP BASIS administration, HANA, S/4HANA, migrations, cloud operations and real-world troubleshooting — explained simply.</p>
-    <div class="hero-actions">
-      <a class="btn primary" href="#articles">Explore articles <span>→</span></a>
-      <a class="btn ghost" href="#topics">Browse topics</a>
-    </div>
-    <div class="trust-row"><span>✓ Beginner friendly</span><span>✓ Scenario based</span><span>✓ Interview focused</span></div>
-  </div>
-  <div class="hero-visual">
-    <div class="orb"></div>
-    <div class="terminal">
-      <div class="terminal-top"><span></span><span></span><span></span><label>BASIS_NEXUS.sh</label></div>
-      <div class="terminal-body">
-        <p><i>$</i> sapcontrol -nr 00 -function GetProcessList</p>
-        <p class="ok">✓ disp+work &nbsp; GREEN</p>
-        <p class="ok">✓ igswd_mt &nbsp;&nbsp; GREEN</p>
-        <p class="ok">✓ msg_server &nbsp; GREEN</p>
-        <p><i>$</i> systemctl status sapinit</p>
-        <p class="cyan">● SAP SYSTEM — OPERATIONAL</p>
-      </div>
-    </div>
-    <div class="float-card fc1"><b>10+</b><small>Core Topics</small></div>
-    <div class="float-card fc2"><b>24×7</b><small>Ops Mindset</small></div>
-  </div>
-</section>
+<section class="hero"><div><span class="eyebrow">BASIS NEXUS • V8</span><h1>Your SAP BASIS syllabus, converted into a <em>step-by-step technical portal.</em></h1>
+<p>The uploaded syllabus is organised into practical topic guides. Every major module includes a relevant architecture diagram, detailed steps, T-codes/tools, source-syllabus coverage, production checklist and interview wording.</p>
+<div class="actions"><a href="#topics">Explore topics →</a><a class="ghost" href="#syllabus">Search syllabus</a></div></div>
+<div class="hero-card"><div class="terminal">BASIS@PRODUCTION</div><div class="flow"><span>Understand</span><i>→</i><span>Check</span><i>→</i><span>Change</span><i>→</i><span>Validate</span><i>→</i><span>RCA</span></div><p>Learn the reasoning behind each BASIS activity instead of memorising only the T-code.</p></div></section>
 
-<section class="stats">
-  <div><strong>01</strong><span>Learn the architecture</span></div>
-  <div><strong>02</strong><span>Master daily operations</span></div>
-  <div><strong>03</strong><span>Troubleshoot scenarios</span></div>
-  <div><strong>04</strong><span>Prepare for interviews</span></div>
-</section>
+<section id="topics" class="section"><div class="head"><span class="eyebrow">DETAILED TOPICS</span><h2>Every module has a visual + step-by-step guide</h2><p>Click any card. The guide opens with the relevant diagram and detailed procedure.</p></div>
+<input id="topicSearch" class="search" placeholder="Search: HANA, RFC, STMS, Fiori, Java, SUM, printer, profile...">
+<div id="cards" class="grid"><article class="card" data-module="abap">
+      <div class="icon">🏗️</div><span class="tag">10 STEP GUIDE</span>
+      <h3>AS ABAP Fundamentals &amp; System Start/Stop</h3><p>Architecture, instances, work processes, start/stop procedures and log analysis.</p>
+      <div class="chips"><span>AS ABAP Fundamentals</span><span>Starting and Stopping SAP Systems</span><span>Exercise 1: Start and Stop the SAP System</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="profiles">
+      <div class="icon">⚙️</div><span class="tag">10 STEP GUIDE</span>
+      <h3>Technical System Configuration: Profiles, Parameters, Operation Modes &amp; Task Lists</h3><p>Profile management, RZ10/RZ11, operation modes and ABAP task lists.</p>
+      <div class="chips"><span>Technical System Configuration (Profile Management)</span><span>Setting profile parameters</span><span>Setting up and working with operation modes</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="database">
+      <div class="icon">🗄️</div><span class="tag">8 STEP GUIDE</span>
+      <h3>Database Architecture, Services &amp; Administration</h3><p>Database architecture from a BASIS perspective and how SAP depends on the database.</p>
+      <div class="chips"><span>Architecture of Database systems</span><span>Technical Architecture, Services &amp; Administration of SAP Databases</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="users-rfc">
+      <div class="icon">👤</div><span class="tag">9 STEP GUIDE</span>
+      <h3>User Administration, Authorization &amp; RFC Communication</h3><p>Users, authorization concepts, RFC destinations and secure system-to-system communication.</p>
+      <div class="chips"><span>Fundamentals of User Administration</span><span>Understanding the User administration concept</span><span>Understanding the AS ABAP Authorization concept</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="maintenance">
+      <div class="icon">🧰</div><span class="tag">10 STEP GUIDE</span>
+      <h3>Software Maintenance: SAP Notes, SPAM/SAINT &amp; SUM</h3><p>Plan, prepare, execute and validate SAP software maintenance.</p>
+      <div class="chips"><span>Software Maintenance</span><span>Implementing SAP Notes and SAP Support Packages</span><span>Preparing a software maintenance process</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="output-jobs">
+      <div class="icon">🖨️</div><span class="tag">10 STEP GUIDE</span>
+      <h3>Output Management, Spool &amp; Background Jobs</h3><p>Printer configuration, spool lifecycle and safe background-job administration.</p>
+      <div class="chips"><span>Output Management</span><span>Printer Configuration</span><span>Background Job Processing</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="monitoring">
+      <div class="icon">🔎</div><span class="tag">10 STEP GUIDE</span>
+      <h3>System Monitoring, Troubleshooting &amp; Solution Manager</h3><p>A practical evidence-driven monitoring and troubleshooting methodology.</p>
+      <div class="chips"><span>System Monitoring and Troubleshooting</span><span>Monitoring SAP Systems AS ABAP</span><span>Monitoring with SAP Solution Manager</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="http">
+      <div class="icon">🌐</div><span class="tag">8 STEP GUIDE</span>
+      <h3>HTTP Communication: ICM, ICF, Gateway &amp; Web Dispatcher</h3><p>HTTP/HTTPS components, SAP Gateway and Web Dispatcher configuration concepts.</p>
+      <div class="chips"><span>Technology Components for HTTP-based Communication</span><span>Internet Communication Manager (ICM)</span><span>Internet Communication Framework (ICF)</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="smtp-ers">
+      <div class="icon">✉️</div><span class="tag">7 STEP GUIDE</span>
+      <h3>SMTP, SAPconnect &amp; Enqueue Replication Server</h3><p>Email flow and high-availability concepts around enqueue replication.</p>
+      <div class="chips"><span>SMTP Communication and SAPconnect</span><span>Enqueue Replication Server (ERS)</span><span>Exercise 48: Send and Receive E-Mails Using SMTP with AS ABAP</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="java">
+      <div class="icon">☕</div><span class="tag">10 STEP GUIDE</span>
+      <h3>SAP NetWeaver AS Java Fundamentals &amp; Administration</h3><p>Java architecture, startup/stop, Config Tool, NWA, UME and Java monitoring.</p>
+      <div class="chips"><span>Fundamentals of SAP NW AS Java</span><span>Describing the Fundamental Concepts of SAP NW AS Java</span><span>Describing the Architecture of the SAP NW Java</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="alm-cts">
+      <div class="icon">📦</div><span class="tag">10 STEP GUIDE</span>
+      <h3>Application Lifecycle Management &amp; CTS/TMS</h3><p>Landscape, transport requests, export/import, QA approval and monitoring.</p>
+      <div class="chips"><span>Application lifecycle Management (ALM)</span><span>Introduction to Software Logistics Toolsets</span><span>SAP System landscape and client concept</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="client-cts">
+      <div class="icon">🔄</div><span class="tag">7 STEP GUIDE</span>
+      <h3>Client Administration, Enhanced CTS &amp; Non-ABAP Transport</h3><p>Client copy/compare concepts and enhanced transport scenarios.</p>
+      <div class="chips"><span>Client Administration</span><span>Client Copy and Client Transport Tools</span><span>Client Compare and Client Maintenance Tools</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="fiori">
+      <div class="icon">🟦</div><span class="tag">10 STEP GUIDE</span>
+      <h3>SAP Fiori: Infrastructure, Deployment, Security &amp; Operations</h3><p>Fiori app types, launchpad, HTTPS, SSO, deployment options, search and operations.</p>
+      <div class="chips"><span>SAP Fiori Introduction</span><span>SAP Fiori App Types</span><span>Implementation Planning</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="hana">
+      <div class="icon">🧠</div><span class="tag">10 STEP GUIDE</span>
+      <h3>SAP HANA Overview, Architecture, MDC &amp; Administration</h3><p>HANA fundamentals, requirements, MDC, Studio/Cockpit, administration and lifecycle.</p>
+      <div class="chips"><span>SAP HANA Overview</span><span>Describing SAP HANA</span><span>Technical Requirements of SAP HANA</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="hana-backup-security">
+      <div class="icon">🛡️</div><span class="tag">10 STEP GUIDE</span>
+      <h3>HANA Backup, Recovery, Security, Users, Roles &amp; Auditing</h3><p>Backup/recovery strategy and HANA security administration.</p>
+      <div class="chips"><span>Database Administration tasks using SAP HANA Studio &amp; SAP HANA cockpit 2.0</span><span>Backup and Recovery using SAP HANA cockpit 2.0</span><span>SAP HANA Security</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="hana-migration">
+      <div class="icon">🚚</div><span class="tag">10 STEP GUIDE</span>
+      <h3>Migration to SAP HANA</h3><p>A BASIS-focused migration lifecycle: assessment, preparation, execution and validation.</p>
+      <div class="chips"><span>Migration to SAP HANA</span><span>Running SAP Enterprise Suites on SAP HANA</span><span>SAP HANA Installation</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article><article class="card" data-module="global-tools">
+      <div class="icon">🌍</div><span class="tag">7 STEP GUIDE</span>
+      <h3>CUA, eCATT &amp; Globalization</h3><p>Central user administration, automated testing concepts and multi-language considerations.</p>
+      <div class="chips"><span>Central User Administration (CUA)</span><span>Extended Computer Aided Test Tool (eCATT)</span><span>Aspects of Globalization</span></div>
+      <button type="button">Open detailed guide →</button>
+    </article></div></section>
 
-<section class="section overview">
-  <div class="section-head"><div><div class="eyebrow">The BASIS map</div><h2>What does SAP BASIS cover?</h2></div></div>
-  <div class="overview-grid">
-    <div><b>01 · Platform</b><p>Installation, instances, ASCS/ERS, profiles, kernel, SAP Host Agent and operating-system integration.</p></div>
-    <div><b>02 · Operations</b><p>User administration, jobs, spool, RFCs, transports, system monitoring and daily health checks.</p></div>
-    <div><b>03 · Database</b><p>HANA architecture, tenant databases, backups, recovery, replication, capacity and database connectivity.</p></div>
-    <div><b>04 · Lifecycle</b><p>Support packages, SPAM/SAINT, kernel upgrades, SUM, DMO, S/4HANA conversion and system copies.</p></div>
-    <div><b>05 · Reliability</b><p>Performance analysis, HA/DR, incident response, RCA, certificates and secure communication.</p></div>
-    <div><b>06 · Cloud</b><p>AWS, SAP Cloud Connector, RISE with SAP and hybrid on-premise/cloud operations.</p></div>
-  </div>
-</section>
-<section class="section" id="articles">
-  <div class="section-head">
-    <div><div class="eyebrow">Knowledge base</div><h2>Latest articles</h2></div>
-    <div class="controls">
-      <div class="searchbox"><span>⌕</span><input id="articleSearch" placeholder="Search articles..." /></div>
-      <select id="categoryFilter"><option value="all">All topics</option><option value="BASIS">BASIS</option><option value="HANA">HANA</option><option value="S/4HANA">S/4HANA</option><option value="Cloud">Cloud</option><option value="Troubleshooting">Troubleshooting</option></select>
-    </div>
-  </div>
-  <div class="featured-grid" id="articleGrid">
-    <article class="article-card featured" data-category="BASIS" data-title="SAP BASIS Architecture Explained">
-      <div class="card-visual architecture"><span>ASCS</span><span>PAS / AAS</span><span>HANA</span></div>
-      <div class="card-body"><div class="meta"><span class="tag">BASIS</span><span>8 min read</span></div><h3>SAP BASIS Architecture Explained</h3><p>Understand ASCS, PAS, AAS, work processes, database connectivity and the role of BASIS.</p><button class="read-btn" data-article="architecture">Read article →</button></div>
-    </article>
-    <article class="article-card" data-category="BASIS" data-title="STMS Transport Management System">
-      <div class="card-visual transport"><div class="node">DEV</div><div class="line"></div><div class="node">QAS</div><div class="line"></div><div class="node">PRD</div></div>
-      <div class="card-body"><div class="meta"><span class="tag">BASIS</span><span>7 min read</span></div><h3>STMS: Transport Management Made Simple</h3><p>Learn the DEV → QAS → PRD flow, transport routes, import queues and common checks.</p><button class="read-btn" data-article="stms">Read article →</button></div>
-    </article>
-    <article class="article-card" data-category="HANA" data-title="SAP HANA System DB Tenant DB">
-      <div class="card-visual database"><div>HANA</div><small>SYSTEM DB</small><small>TENANT DB</small></div>
-      <div class="card-body"><div class="meta"><span class="tag">HANA</span><span>6 min read</span></div><h3>HANA System DB vs Tenant DB</h3><p>A simple mental model for understanding multitenant HANA architecture.</p><button class="read-btn" data-article="hana">Read article →</button></div>
-    </article>
-    <article class="article-card" data-category="Troubleshooting" data-title="ST03N STAD Performance Analysis">
-      <div class="card-visual chart"><div class="bars"><i></i><i></i><i></i><i></i><i></i></div><span>ST03N / STAD</span></div>
-      <div class="card-body"><div class="meta"><span class="tag">Troubleshooting</span><span>9 min read</span></div><h3>Performance Analysis with ST03N & STAD</h3><p>How to read response time, DB time, CPU time and identify where an SAP transaction is spending time.</p><button class="read-btn" data-article="performance">Read article →</button></div>
-    </article>
-    <article class="article-card" data-category="S/4HANA" data-title="SUM DMO S4HANA Migration">
-      <div class="card-visual migration"><span>ECC</span><b>→</b><span>S/4</span></div>
-      <div class="card-body"><div class="meta"><span class="tag">S/4HANA</span><span>10 min read</span></div><h3>SUM & DMO: The Migration Picture</h3><p>Understand the role of SUM, DMO, Maintenance Planner and the migration lifecycle.</p><button class="read-btn" data-article="migration">Read article →</button></div>
-    </article>
-    <article class="article-card" data-category="Cloud" data-title="SAP Cloud Connector">
-      <div class="card-visual cloud"><div class="cloud-icon">☁</div><span>ON-PREM</span><b>↔</b><span>CLOUD</span></div>
-      <div class="card-body"><div class="meta"><span class="tag">Cloud</span><span>7 min read</span></div><h3>SAP Cloud Connector Explained</h3><p>See how Cloud Connector creates a controlled tunnel between on-premise systems and SAP cloud services.</p><button class="read-btn" data-article="cloud">Read article →</button></div>
-    </article>
-  </div>
-  <div id="noResults" class="no-results">No articles match your search.</div>
-</section>
+<section id="diagrams" class="section dark"><div class="head"><span class="eyebrow">VISUAL LAB</span><h2>Relevant diagrams for the syllabus</h2><p>Click a diagram to open the corresponding topic guide.</p></div>
+<div class="diagram-grid"><article class="diagram-card" data-module="abap"><img src="diagrams/abap-architecture.svg" alt="AS ABAP Fundamentals &amp; System Start/Stop"><h3>AS ABAP Fundamentals &amp; System Start/Stop</h3><span>Open guide →</span></article><article class="diagram-card" data-module="profiles"><img src="diagrams/profiles-operation-modes.svg" alt="Technical System Configuration: Profiles, Parameters, Operation Modes &amp; Task Lists"><h3>Technical System Configuration: Profiles, Parameters, Operation Modes &amp; Task Lists</h3><span>Open guide →</span></article><article class="diagram-card" data-module="database"><img src="diagrams/database-architecture.svg" alt="Database Architecture, Services &amp; Administration"><h3>Database Architecture, Services &amp; Administration</h3><span>Open guide →</span></article><article class="diagram-card" data-module="users-rfc"><img src="diagrams/user-rfc.svg" alt="User Administration, Authorization &amp; RFC Communication"><h3>User Administration, Authorization &amp; RFC Communication</h3><span>Open guide →</span></article><article class="diagram-card" data-module="maintenance"><img src="diagrams/software-maintenance.svg" alt="Software Maintenance: SAP Notes, SPAM/SAINT &amp; SUM"><h3>Software Maintenance: SAP Notes, SPAM/SAINT &amp; SUM</h3><span>Open guide →</span></article><article class="diagram-card" data-module="output-jobs"><img src="diagrams/spool-jobs.svg" alt="Output Management, Spool &amp; Background Jobs"><h3>Output Management, Spool &amp; Background Jobs</h3><span>Open guide →</span></article><article class="diagram-card" data-module="monitoring"><img src="diagrams/monitoring-troubleshooting.svg" alt="System Monitoring, Troubleshooting &amp; Solution Manager"><h3>System Monitoring, Troubleshooting &amp; Solution Manager</h3><span>Open guide →</span></article><article class="diagram-card" data-module="http"><img src="diagrams/http-webdispatcher.svg" alt="HTTP Communication: ICM, ICF, Gateway &amp; Web Dispatcher"><h3>HTTP Communication: ICM, ICF, Gateway &amp; Web Dispatcher</h3><span>Open guide →</span></article><article class="diagram-card" data-module="smtp-ers"><img src="diagrams/smtp-ers.svg" alt="SMTP, SAPconnect &amp; Enqueue Replication Server"><h3>SMTP, SAPconnect &amp; Enqueue Replication Server</h3><span>Open guide →</span></article><article class="diagram-card" data-module="java"><img src="diagrams/java-architecture.svg" alt="SAP NetWeaver AS Java Fundamentals &amp; Administration"><h3>SAP NetWeaver AS Java Fundamentals &amp; Administration</h3><span>Open guide →</span></article><article class="diagram-card" data-module="alm-cts"><img src="diagrams/cts-tms.svg" alt="Application Lifecycle Management &amp; CTS/TMS"><h3>Application Lifecycle Management &amp; CTS/TMS</h3><span>Open guide →</span></article><article class="diagram-card" data-module="client-cts"><img src="diagrams/client-cts.svg" alt="Client Administration, Enhanced CTS &amp; Non-ABAP Transport"><h3>Client Administration, Enhanced CTS &amp; Non-ABAP Transport</h3><span>Open guide →</span></article><article class="diagram-card" data-module="fiori"><img src="diagrams/fiori-architecture.svg" alt="SAP Fiori: Infrastructure, Deployment, Security &amp; Operations"><h3>SAP Fiori: Infrastructure, Deployment, Security &amp; Operations</h3><span>Open guide →</span></article><article class="diagram-card" data-module="hana"><img src="diagrams/hana-mdc.svg" alt="SAP HANA Overview, Architecture, MDC &amp; Administration"><h3>SAP HANA Overview, Architecture, MDC &amp; Administration</h3><span>Open guide →</span></article><article class="diagram-card" data-module="hana-backup-security"><img src="diagrams/hana-backup-security.svg" alt="HANA Backup, Recovery, Security, Users, Roles &amp; Auditing"><h3>HANA Backup, Recovery, Security, Users, Roles &amp; Auditing</h3><span>Open guide →</span></article><article class="diagram-card" data-module="hana-migration"><img src="diagrams/hana-migration.svg" alt="Migration to SAP HANA"><h3>Migration to SAP HANA</h3><span>Open guide →</span></article><article class="diagram-card" data-module="global-tools"><img src="diagrams/globalization.svg" alt="CUA, eCATT &amp; Globalization"><h3>CUA, eCATT &amp; Globalization</h3><span>Open guide →</span></article></div></section>
 
-<section class="section topics-section" id="topics">
-  <div class="section-head"><div><div class="eyebrow">Explore</div><h2>Learn by topic</h2></div></div>
-  <div class="topic-grid">
-    <a href="#articles" class="topic"><span>⚙</span><div><b>BASIS Administration</b><small>Users, roles, profiles, parameters, jobs, spool, RFC and daily operations.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>◈</span><div><b>SAP Architecture</b><small>ASCS, ERS, PAS, AAS, work processes, instances, clients and system landscape.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>⇄</span><div><b>Transport Management</b><small>STMS, transport routes, import queues, return codes and transport troubleshooting.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>⌁</span><div><b>Monitoring & Performance</b><small>SM21, ST22, SM50, SM66, ST03N, STAD, DB02 and performance analysis.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>◉</span><div><b>SAP HANA</b><small>System DB, tenant DB, backup, recovery, HANA Cockpit, HA and replication.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>◆</span><div><b>S/4HANA & Upgrades</b><small>SUM, DMO, system conversion, upgrades, kernel maintenance and Maintenance Planner.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>☁</span><div><b>Cloud & RISE with SAP</b><small>AWS, Cloud Connector, RISE, connectivity, certificates and cloud operations.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>⟳</span><div><b>System Copy & Refresh</b><small>System refresh, homogeneous/heterogeneous copy, SWPM, client copy and post-copy steps.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>◫</span><div><b>Installation & Lifecycle</b><small>SAP installation, filesystem mounts, profiles, SAP Host Agent, start/stop and patches.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>♙</span><div><b>Security & Certificates</b><small>SU01, PFCG, SUIM, SSL/TLS, STRUST, certificates and secure connectivity.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>⌘</span><div><b>High Availability & DR</b><small>ASCS/ERS, HANA System Replication, failover, backup strategy and disaster recovery.</small></div><em>→</em></a>
-    <a href="#articles" class="topic"><span>✓</span><div><b>Troubleshooting & Interview Prep</b><small>RCA, incident scenarios, issue isolation and practical BASIS interview answers.</small></div><em>→</em></a>
-  </div>
-</section>
+<section id="syllabus" class="section"><div class="head"><span class="eyebrow">YOUR UPLOADED SYLLABUS</span><h2>Search the original topic list</h2><p>The module guides above are mapped back to the terminology and exercises present in your uploaded document.</p></div>
+<input id="syllabusSearch" class="search" placeholder="Search an exact syllabus topic or exercise...">
+<div id="syllabusResults" class="syllabus-results"></div></section>
 
-
-<section class="section scenarios" id="scenarios">
-  <div class="section-head">
-    <div><div class="eyebrow">Production playbook</div><h2>Real-world scenarios & troubleshooting</h2></div>
-    <p class="section-intro">A practical incident-first approach: identify the symptom, collect evidence, isolate the layer, fix safely, validate, and document the RCA.</p>
-  </div>
-  <div class="scenario-grid">
-    <article class="scenario-card critical">
-      <div class="scenario-top"><span class="severity">P1 / CRITICAL</span><span>Availability</span></div>
-      <h3>SAP system is down</h3>
-      <p>Users cannot log in or receive connection errors.</p>
-      <ol><li>Check OS/server availability and filesystem space.</li><li>Run <code>sapcontrol -nr &lt;NN&gt; -function GetProcessList</code>.</li><li>Check ASCS/PAS/AAS and database status.</li><li>Review <b>dev_disp</b>, <b>dev_ms</b>, <b>dev_w*</b> and system logs.</li><li>Restart only after identifying the failed component and following the runbook.</li></ol>
-      <button class="scenario-btn" data-scenario="systemdown">Open troubleshooting guide →</button>
-    </article>
-
-    <article class="scenario-card">
-      <div class="scenario-top"><span class="severity">P1 / HIGH</span><span>Performance</span></div>
-      <h3>SAP is suddenly very slow</h3>
-      <p>Multiple users report high response time.</p>
-      <ol><li>Confirm scope and exact time window.</li><li>Check <b>ST03N</b> for workload and response-time trends.</li><li>Use <b>STAD</b> for request-level evidence.</li><li>Check <b>SM50/SM66</b>, CPU, memory and DB indicators.</li><li>Correlate with recent changes and infrastructure alerts.</li></ol>
-      <button class="scenario-btn" data-scenario="slow">Open troubleshooting guide →</button>
-    </article>
-
-    <article class="scenario-card">
-      <div class="scenario-top"><span class="severity">HIGH</span><span>Transport</span></div>
-      <h3>Transport import failed — RC 8 / RC 12</h3>
-      <p>A transport reaches QAS/PRD but the import ends with errors.</p>
-      <ol><li>Open the transport import log in <b>STMS</b>.</li><li>Identify the exact object and error message.</li><li>Check sequence/dependencies and target system status.</li><li>Review relevant application logs or DDIC/object activation issues.</li><li>Do not blindly re-import; document the cause and corrective action.</li></ol>
-      <button class="scenario-btn" data-scenario="transport">Open troubleshooting guide →</button>
-    </article>
-
-    <article class="scenario-card">
-      <div class="scenario-top"><span class="severity">HIGH</span><span>Database</span></div>
-      <h3>HANA disk usage is critical</h3>
-      <p>Database filesystem or HANA persistence usage is approaching capacity.</p>
-      <ol><li>Confirm which filesystem/volume is consuming space.</li><li>Check HANA alerts and database usage.</li><li>Review backup/log-backup destination growth.</li><li>Do not delete database files manually.</li><li>Engage the DB/storage owner and execute the approved cleanup/extension procedure.</li></ol>
-      <button class="scenario-btn" data-scenario="hanaDisk">Open troubleshooting guide →</button>
-    </article>
-
-    <article class="scenario-card">
-      <div class="scenario-top"><span class="severity">MEDIUM</span><span>Jobs</span></div>
-      <h3>Background job is cancelled</h3>
-      <p>A business-critical SM37 job fails repeatedly.</p>
-      <ol><li>Check job log, job step and runtime.</li><li>Check the executing user and authorization.</li><li>Check ST22 if an ABAP dump occurred.</li><li>Check SM50/SM66 and application logs if processing is stuck.</li><li>Validate variant/input data before rerunning.</li></ol>
-      <button class="scenario-btn" data-scenario="job">Open troubleshooting guide →</button>
-    </article>
-
-    <article class="scenario-card">
-      <div class="scenario-top"><span class="severity">MEDIUM</span><span>Connectivity</span></div>
-      <h3>RFC connection fails</h3>
-      <p>An interface reports a connection or authorization error.</p>
-      <ol><li>Test the destination in <b>SM59</b>.</li><li>Separate network/host failure from authentication failure.</li><li>Check gateway/service configuration where relevant.</li><li>Validate technical user, certificate or password.</li><li>Retest from SAP and confirm the dependent interface.</li></ol>
-      <button class="scenario-btn" data-scenario="rfc">Open troubleshooting guide →</button>
-    </article>
-
-    <article class="scenario-card">
-      <div class="scenario-top"><span class="severity">MEDIUM</span><span>Security</span></div>
-      <h3>SSL certificate is expired</h3>
-      <p>An HTTPS integration suddenly stops working after certificate expiry.</p>
-      <ol><li>Confirm expiry and identify the affected PSE in <b>STRUST</b>.</li><li>Obtain the correct certificate chain from the approved source.</li><li>Update/import the chain according to the change procedure.</li><li>Save/distribute the PSE as required.</li><li>Retest the integration and document the new expiry date.</li></ol>
-      <button class="scenario-btn" data-scenario="ssl">Open troubleshooting guide →</button>
-    </article>
-
-    <article class="scenario-card">
-      <div class="scenario-top"><span class="severity">MEDIUM</span><span>Users</span></div>
-      <h3>User cannot log in</h3>
-      <p>A user reports password, lock, authorization or connection problems.</p>
-      <ol><li>Check whether the user is locked/expired in <b>SU01</b>.</li><li>Separate authentication from authorization.</li><li>Check ST22/application logs if a technical error occurs.</li><li>For Fiori/SSO, check the identity provider/trust path.</li><li>Never grant broad roles as a quick fix.</li></ol>
-      <button class="scenario-btn" data-scenario="user">Open troubleshooting guide →</button>
-    </article>
-  </div>
-</section>
-
-<section class="section error-guide" id="errors">
-  <div class="section-head">
-    <div><div class="eyebrow">Quick reference</div><h2>Common BASIS errors</h2></div>
-  </div>
-  <div class="error-table-wrap">
-    <table class="error-table">
-      <thead><tr><th>Symptom / Error</th><th>First checks</th><th>Typical direction</th></tr></thead>
-      <tbody>
-        <tr><td><b>System not available</b></td><td>sapcontrol, OS, ASCS/PAS, DB, logs</td><td>Identify failed layer before restart</td></tr>
-        <tr><td><b>ST22 ABAP dump</b></td><td>Dump category, time, program, user</td><td>ABAP/application or data issue</td></tr>
-        <tr><td><b>SM21 critical event</b></td><td>Event text and timestamp</td><td>Correlate with OS/DB/application logs</td></tr>
-        <tr><td><b>SM37 job cancelled</b></td><td>Job log, step, user, ST22</td><td>Program, authorization, data or resource issue</td></tr>
-        <tr><td><b>STMS RC 8 / 12</b></td><td>Import log, object, sequence</td><td>Transport/content/dependency issue</td></tr>
-        <tr><td><b>RFC connection failed</b></td><td>SM59 connection/auth tests</td><td>Network, gateway, credentials/certificate</td></tr>
-        <tr><td><b>Work processes full</b></td><td>SM50/SM66, long runners, CPU/DB</td><td>Long transaction, lock, DB or resource bottleneck</td></tr>
-        <tr><td><b>Filesystem full</b></td><td>df -h, mount usage, logs</td><td>Safe cleanup/extension; never delete SAP DB files blindly</td></tr>
-        <tr><td><b>HANA alert / disk full</b></td><td>HANA alerts, persistence/log area</td><td>DB/storage investigation and approved capacity action</td></tr>
-        <tr><td><b>SSL handshake/certificate error</b></td><td>STRUST, expiry, certificate chain</td><td>Trust/certificate configuration</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-<section class="section about" id="about">
-  <div class="about-card">
-    <div class="about-avatar">PK</div>
-    <div>
-      <div class="eyebrow">About the author</div>
-      <h2>Pradeep Kumar</h2>
-      <p>I'm an IT professional with 10+ years of experience across infrastructure, Linux/VMware environments, SAP technical platforms, data and analytics, and technology delivery. My career has included infrastructure operations, SAP PI/PO exposure, business and analytics roles, and Scrum Master / SAFe responsibilities.</p>
-      <p>BASIS Nexus is where I bring that technical and operations mindset into SAP BASIS — documenting architecture, administration, HANA, S/4HANA, migrations, cloud connectivity, monitoring and troubleshooting in simple, practical language.</p>
-      <div class="chips"><span>10+ Years IT</span><span>Infrastructure</span><span>SAP Technical</span><span>Linux / VMware</span><span>HANA</span><span>S/4HANA</span><span>Cloud</span><span>SAFe / Scrum</span></div>
-    </div>
-  </div>
-</section>
+<section id="about" class="section dark"><div class="about"><div class="avatar">PK</div><div><span class="eyebrow">ABOUT BASIS NEXUS</span><h2>Practical SAP BASIS knowledge, not just definitions.</h2>
+<p>BASIS Nexus is designed as a learning and interview companion for SAP technical administration. The objective is to explain what to check, why to check it, how to troubleshoot it, how to validate the result and how to explain the same work in an interview.</p>
+<div class="stats"><span><b>16</b> detailed modules</span><span><b>16</b> architecture diagrams</span><span><b>200+</b> syllabus lines mapped</span></div></div></div></section>
 </main>
-
-<footer><div><a class="brand" href="#home"><span class="brand-mark">N</span><span>BASIS <b>NEXUS</b></span></a><p>Practical SAP technical knowledge.</p></div><div class="footer-links"><a href="#articles">Articles</a><a href="#topics">Topics</a><a href="#about">About</a></div><span>© 2026 BASIS Nexus</span></footer>
-
-<div class="modal" id="modal"><div class="modal-panel"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div></div>
-
-<div class="search-overlay" id="searchOverlay"><div class="global-search"><button class="close" id="closeSearch">×</button><div class="eyebrow">Search BASIS Nexus</div><h2>What do you want to learn?</h2><input id="globalSearch" autofocus placeholder="Try: STMS, HANA, performance..." /><div id="searchResults"></div></div></div>
-
-<script src="app.js"></script>
-</body>
-</html>
+<footer>© 2026 BASIS Nexus · Detailed SAP BASIS learning portal</footer>
+<div id="modal" class="modal"><div class="shade"></div><div class="modalbox"><button id="close">×</button><div id="body"></div></div></div>
+<script src="app.js" defer></script></body></html>
