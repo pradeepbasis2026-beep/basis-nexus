@@ -1,26 +1,19 @@
-# BASIS Nexus v7
+# BASIS Nexus v4 — Ultimate
 
-IMPORTANT: upload these files directly to the ROOT of the GitHub Pages repository:
-- index.html
-- style.css
-- app.js
+This version is a major expansion of the BASIS Nexus blog.
 
-No folder nesting.
+### Included
+- Much larger, more readable content
+- Detailed SAP BASIS / HANA / S/4HANA topics
+- Production troubleshooting playbooks
+- STAR interview laboratory with model answers
+- Random STAR interview question mode
+- Colourful interactive architecture diagrams
+- SAP 3-tier, HANA MDC, STMS, Cloud Connector, migration and incident-flow diagrams
+- Search/filtering, dark mode and responsive layout
+- T-code and troubleshooting content
 
-## v7 fixes
-- All cards are rendered after `app.js` loads with `defer`.
-- Event listeners use standard addEventListener.
-- T-code search is functional and shows an explanation immediately.
-- T-code cards are clickable.
-- Troubleshooting cards open detailed guides.
-- STAR questions can be searched and expanded.
-- Random interview question works.
-- About section is visible and included in the navigation.
-- RCA cards and migration phases are interactive.
-- Dark/light toggle works.
-- Mobile navigation works.
+### GitHub Pages upload
+Replace the existing `index.html`, `style.css` and `app.js` in the `main` branch with the files from this package. Keep `sap-basis-architecture.html` if you already have it.
 
-## T-code examples
-ST22, ST03N, STAD, SM50, SM66, SM21, SM37, SM12, SM59, STMS, SE10, SP01, SPAD, SU01, SUIM, STRUST, RZ10, RZ11, SM51, SM04, AL08, SM13, ST05, ST12, ST06, ST10, DB02, DB12, DB13, DBACOCKPIT, SMICM, SMGW, SM58, SMQ1, SMQ2, ST11.
-
-The T-code descriptions are intended as a learning reference; exact availability/functions can vary by SAP release and installed components.
+After committing, wait 1–2 minutes and hard refresh the site with Ctrl+Shift+R.
